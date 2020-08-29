@@ -1,5 +1,8 @@
 # OpenBlog
 
+[![Build Status](https://travis-ci.org/BitQuarkApps/OpenBlog.svg?branch=master)](https://travis-ci.org/BitQuarkApps/OpenBlog)
+
+
 Un blog gratuito y de código abierto escrito en *Laravel + Vue + Tailwind CSS*, pensado para aquellos que desean tener un blog y ahorrarse gastos de desarrollo.
 
 La configuración es simple, simplemente clona este repositorio y móntalo en tu servidor, tendrás un blog funcional y rápido.
