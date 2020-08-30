@@ -1,0 +1,60 @@
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+@mixin media($media) {
+  @if $media==xs {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $media==sm {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $media==md {
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $media==lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+@mixin xsLandscape() {
+  @media only screen and (max-width: $breakpoint-sm) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin smLandscape() {
+  @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin smPortrait() {
+  @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) and (orientation: portrait) {
+    @content;
+  }
+}
+
+
+@mixin mdLandscape() {
+  @media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mdPortrait() {
+  @media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin lgLandscape() {
+  @media only screen and (min-width: $breakpoint-lg) and (orientation: landscape) {
+    @content;
+  }
+}

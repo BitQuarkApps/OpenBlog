@@ -52,8 +52,9 @@
         />
     </head>
     <body>
-        <div id="app">
-            @yield("navigation")
+        <div id="app" class="side-nav-layout">
+            {{-- Navbar --}}
+            <nav class="sidemenu"></nav>
             <main id="app">
                 {{--
                     El yield content cubre la mayoría de elementos dentro,
