@@ -4,15 +4,13 @@
 // Variables
 @import "_variables.scss";
 @import "./mixins/responsive.scss";
-
-// Tailwind
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
 @import "./components/MainLayout.scss";
+// Tailwind
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
 
 * {
 	margin: 0;
