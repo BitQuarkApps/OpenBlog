@@ -105,7 +105,121 @@
 	}
 
 	& .content{
-		width: 75%;
-		height: 100%;
+		width: 100%;
+		@include media(md){
+			width: 75%;
+		}
+		
+		& .in-content-navigation{
+			height: 10vh;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			padding: 1em 0.5em;
+			align-items: center;
+			justify-content: space-evenly;
+
+			& .welcome-text{
+				max-width: 35%;
+				& p{
+					text-overflow: ellipsis;
+				}
+				& p{
+					font-weight: 700;
+					color: $text;
+					@media (prefers-color-scheme: dark) {
+						color: $text_dark;
+					}
+					@media (prefers-color-scheme: light) {
+						color: $text;
+					}
+					& span{
+						font-weight: 600;
+						color: lighten($text, 25.5);
+					}
+				}
+			}
+
+			& .menu-icon{
+				& svg{
+					@media (prefers-color-scheme: dark) {
+						fill: $secondary;
+					}
+					@media (prefers-color-scheme: light) {
+						fill: $primary;
+					}
+				}
+				visibility: hidden;
+				@include media(xs){
+					visibility: visible;
+					width: 10%;
+				}
+				@include media(sm){
+					display: flex;
+					visibility: visible;
+				}
+			}
+
+			& .searchbar{
+				display: flex;
+				flex-direction: row;
+				width: 35%;
+				border-radius: 7px;
+				box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+				@include media(xs){
+					width: 45%;
+				}
+				@include media(sm){
+					width: 45%;
+				}
+				& input{
+					width: 85%;
+					font-size: 16px;
+					font-weight: 500;
+					background-color: transparent;
+					outline: none;
+					padding: 0.5em 1em;
+					@include media(xs){
+						width: 75%;
+					}
+					@include media(sm){
+						width: 75%;
+					}
+					&:focus{
+						outline: none;
+					}
+				}
+
+				& button{
+					border-radius: 0 7px 7px 0;
+					width: 15%;
+					border: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@include media(xs){
+						width: 25%;
+					}
+					@include media(sm){
+						width: 25%;
+					}
+					@media (prefers-color-scheme: dark) {
+						background-color: $secondary;
+						padding: 0;
+						margin: 0;
+					}
+					@media (prefers-color-scheme: light) {
+						background-color: $primary;
+					}
+					& svg{
+						transform: scale(0.7);
+						fill: white;
+						padding: 0;
+						margin: 0;
+					}
+				}
+			}
+
+		}
 	}
 }

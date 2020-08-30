@@ -78,7 +78,7 @@
                     </li>
                 </div>
             </nav>
-            <main id="app">
+            <main id="app" class="content">
                 {{--
                     El yield content cubre la mayoría de elementos dentro,
                     del mismo, existirá la etiqueta `article`, lo que nos

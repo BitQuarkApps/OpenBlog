@@ -126,8 +126,170 @@
 }
 
 .side-nav-layout .content {
-  width: 75%;
-  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 1023px) and (max-width: 1360px) {
+  .side-nav-layout .content {
+    width: 75%;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1em 0.5em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.side-nav-layout .content .in-content-navigation .welcome-text {
+  max-width: 35%;
+}
+
+.side-nav-layout .content .in-content-navigation .welcome-text p {
+  text-overflow: ellipsis;
+}
+
+.side-nav-layout .content .in-content-navigation .welcome-text p {
+  font-weight: 700;
+  color: #5d576b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .side-nav-layout .content .in-content-navigation .welcome-text p {
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .side-nav-layout .content .in-content-navigation .welcome-text p {
+    color: #5d576b;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation .welcome-text p span {
+  font-weight: 600;
+  color: #9e98ac;
+}
+
+.side-nav-layout .content .in-content-navigation .menu-icon {
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .side-nav-layout .content .in-content-navigation .menu-icon svg {
+    fill: #99E1D9;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .side-nav-layout .content .in-content-navigation .menu-icon svg {
+    fill: #F7567C;
+  }
+}
+
+@media (max-width: 767px) {
+  .side-nav-layout .content .in-content-navigation .menu-icon {
+    visibility: visible;
+    width: 10%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .side-nav-layout .content .in-content-navigation .menu-icon {
+    display: flex;
+    visibility: visible;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation .searchbar {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  border-radius: 7px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767px) {
+  .side-nav-layout .content .in-content-navigation .searchbar {
+    width: 45%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .side-nav-layout .content .in-content-navigation .searchbar {
+    width: 45%;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation .searchbar input {
+  width: 85%;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  outline: none;
+  padding: 0.5em 1em;
+}
+
+@media (max-width: 767px) {
+  .side-nav-layout .content .in-content-navigation .searchbar input {
+    width: 75%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .side-nav-layout .content .in-content-navigation .searchbar input {
+    width: 75%;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation .searchbar input:focus {
+  outline: none;
+}
+
+.side-nav-layout .content .in-content-navigation .searchbar button {
+  border-radius: 0 7px 7px 0;
+  width: 15%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .side-nav-layout .content .in-content-navigation .searchbar button {
+    width: 25%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .side-nav-layout .content .in-content-navigation .searchbar button {
+    width: 25%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .side-nav-layout .content .in-content-navigation .searchbar button {
+    background-color: #99E1D9;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .side-nav-layout .content .in-content-navigation .searchbar button {
+    background-color: #F7567C;
+  }
+}
+
+.side-nav-layout .content .in-content-navigation .searchbar button svg {
+  transform: scale(0.7);
+  fill: white;
+  padding: 0;
+  margin: 0;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
