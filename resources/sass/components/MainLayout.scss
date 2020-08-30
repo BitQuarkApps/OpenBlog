@@ -11,6 +11,26 @@
 	}
 
 
+	& .mobile-menu-overlay{
+		display: none;
+		&.dismissable{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 50vw;
+			height: 100vh;
+			float: right;
+			z-index: 3;
+			background-color: rgba(0,0,0,0.40);
+			animation: menu-slide linear .6s;
+			@supports(backdrop-filter: blur(7px)){
+				backdrop-filter: blur(7px) saturate(110%);
+			}
+		}
+	}
+
+
 	& .sidemenu{
 		width: 25%;
 		height: 100%;
@@ -26,17 +46,19 @@
 			background-color: darken($background, 1.5);
 		}
 
-		@include media(xs){
-			display: none;
-			position: absolute;
+		&.mobile-open{
+			display: flex !important;
+			width: 50vw;
+			position: absolute !important;
 			top: 0;
 			left: 0;
 		}
+
+		@include media(xs){
+			display: none;
+		}
 		@include media(sm){
 			display: none;
-			position: absolute;
-			top: 0;
-			left: 0;
 		}
 
 		& .user_profile{
@@ -221,5 +243,14 @@
 			}
 
 		}
+	}
+}
+
+@keyframes menu-slide{
+	from{
+		backdrop-filter: blur(0px) saturate(100%);
+	}
+	to{
+		backdrop-filter: blur(7px) saturate(110%);
 	}
 }

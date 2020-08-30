@@ -91,7 +91,7 @@
   !*** ./resources/js/app.js ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 // window.Vue = require('vue');
 
@@ -114,6 +114,54 @@
 // const app = new Vue({
 //     el: '#app',
 // });
+__webpack_require__(/*! ./components/navbar.js */ "./resources/js/components/navbar.js");
+
+/***/ }),
+
+/***/ "./resources/js/components/navbar.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/navbar.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.onload = function () {
+  console.log('ey');
+  navbarFunction();
+};
+
+var navbarFunction = function navbarFunction() {
+  var navBtn = document.querySelector('.menu-icon');
+
+  if (navBtn) {
+    navBtn.addEventListener('click', function () {
+      var menu = document.querySelector('.sidemenu');
+
+      if (menu) {
+        menu.classList.add('mobile-open');
+        var overlay = document.querySelector('.mobile-menu-overlay');
+
+        if (overlay) {
+          overlay.classList.add('dismissable');
+          dismissMobileMenu(menu, overlay);
+        } else {
+          console.warn('No pude encontrar el elemento .mobile-menu-overlay, debería de estar en dentro del componente .side-nav-layout');
+        }
+      } else {
+        console.warn('No pude encontrar el elemento .sidemenu, debería de estar en dentro del componente .side-nav-layout');
+      }
+    });
+  } else {
+    console.warn('No pude encontrar el elemento .menu-icon, debería de estar en dentro del componente .in-content-navigation');
+  }
+};
+
+var dismissMobileMenu = function dismissMobileMenu(menu, overlay) {
+  overlay.addEventListener('click', function () {
+    menu.classList.remove('mobile-open');
+    overlay.classList.remove('dismissable');
+  });
+};
 
 /***/ }),
 

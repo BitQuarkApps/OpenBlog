@@ -78,6 +78,7 @@
                     </li>
                 </div>
             </nav>
+            <div class="mobile-menu-overlay"></div>
             <main id="app" class="content">
                 {{--
                     El yield content cubre la mayoría de elementos dentro,
