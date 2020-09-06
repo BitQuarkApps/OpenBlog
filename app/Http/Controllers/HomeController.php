@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        Carbon::setLocale('es');
+        setlocale(LC_TIME,'es_ES');
+        $hoy = Carbon::now('America/Mexico_City')->formatLocalized("%A %d %B de %Y");
+        return view('home', [
+            'fecha' => $hoy
+        ]);
     }
 }

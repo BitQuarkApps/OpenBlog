@@ -1,0 +1,77 @@
+.grid-container{
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	& .grid{
+		width: 98%;
+		height: 95%;
+		display: grid;
+		grid-template-areas: "latest latest latest latest previous previous"
+							 "latest latest latest latest previous previous"
+							 "random1 random1 random2 random2 random3 random3"
+							 "random4 random4 random4 random4 random5 random5"
+							 "random4 random4 random4 random4 random5 random5";
+	 	& .latest{
+	 		grid-area: latest;
+	 	}
+	 	& .previous{
+	 		grid-area: previous;
+	 	}
+	 	& .random1{
+	 		grid-area: random1;
+	 	}
+	 	& .random2{
+	 		grid-area: random2;
+	 	}
+	 	& .random3{
+	 		grid-area: random3;
+	 	}
+	 	& .random4{
+	 		grid-area: random4;
+	 	}
+	 	& .random5{
+	 		grid-area: random5;
+	 	}
+	}
+}
+
+.aligned{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.post{
+	width: 95%;
+	height: 95%;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+	& img{
+		width: 50%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 7px 0 0 7px;
+	}
+
+	.content{
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-around;
+		padding-left: 0.5em;
+	}
+}

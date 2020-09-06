@@ -141,9 +141,19 @@
   transition: ease-in-out 0.2s;
 }
 
+.side-nav-layout .sidemenu .links li.active {
+  background-color: #f3f3f3;
+}
+
 .side-nav-layout .sidemenu .links li.active svg {
   fill: #99E1D9;
   opacity: 1 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .side-nav-layout .sidemenu .links li.active {
+    background-color: #3a3e5b;
+  }
 }
 
 .side-nav-layout .sidemenu .links li svg {
@@ -22604,6 +22614,87 @@ video {
     background-color: #FCFCFC;
     color: #5d576b;
   }
+}
+
+.grid-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container .grid {
+  width: 98%;
+  height: 95%;
+  display: grid;
+  grid-template-areas: "latest latest latest latest previous previous" "latest latest latest latest previous previous" "random1 random1 random2 random2 random3 random3" "random4 random4 random4 random4 random5 random5" "random4 random4 random4 random4 random5 random5";
+}
+
+.grid-container .grid .latest {
+  grid-area: latest;
+}
+
+.grid-container .grid .previous {
+  grid-area: previous;
+}
+
+.grid-container .grid .random1 {
+  grid-area: random1;
+}
+
+.grid-container .grid .random2 {
+  grid-area: random2;
+}
+
+.grid-container .grid .random3 {
+  grid-area: random3;
+}
+
+.grid-container .grid .random4 {
+  grid-area: random4;
+}
+
+.grid-container .grid .random5 {
+  grid-area: random5;
+}
+
+.aligned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post {
+  width: 95%;
+  height: 95%;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px 0 0 7px;
+}
+
+.post .content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-left: 0.5em;
 }
 
 @media (min-width: 640px){

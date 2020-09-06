@@ -115,6 +115,10 @@
 						fill: $secondary;
 						opacity: 1 !important;
 					}
+					@media (prefers-color-scheme: dark) {
+						background-color: lighten($background_dark, 6.5);
+					}
+					background-color: darken($background, 3.5);
 				}
 
 				& svg{

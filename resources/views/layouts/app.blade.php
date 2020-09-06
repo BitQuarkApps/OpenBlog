@@ -57,16 +57,25 @@
             <nav class="sidemenu">
                 <div class="user_profile">
                     <img src="https://firebasestorage.googleapis.com/v0/b/bitquark-mailer.appspot.com/o/Anuncio%20páginas%20web%20a%20medida.png?alt=media&token=c650ab98-9e3c-496a-be51-6d8e9de24edd">
-                    <h6>Sábado 29 de agosto de 2020</h6>
-                    <button class="font-semibold py-1 px-1 rounded shadow">
-                      Cerrar sesión
-                    </button>
+                    <!-- <h6>Sábado 29 de agosto de 2020</h6> -->
+                    @isset($fecha)
+                        <h6>{{$fecha}}</h6>
+                    @endisset
+                    @guest
+                        <a href="{{url('login')}}" class="font-semibold py-1 px-1 rounded shadow">
+                          Iniciar sesión
+                        </a>
+                    @else
+                        <button class="font-semibold py-1 px-1 rounded shadow">
+                          Cerrar sesión
+                        </button>
+                    @endguest
                 </div>
 
                 <div class="links">
                     <li class="active">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"/></svg>
-                        <a href="#">Inicio</a>
+                        <a href="{{url('/')}}">Inicio</a>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 17.162l-2 .838v-12.972l12-5.028v2.507l-10 4.19v10.465zm18-11.162l-12 5.028v12.972l12-5.028v-12.972zm-14 3.697l10-4.19v-2.507l-12 5.028v12.972l2-.838v-10.465z"/></svg>
