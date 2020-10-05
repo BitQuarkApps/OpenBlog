@@ -50,6 +50,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: stick;
+  top: 0;
+  left: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +73,7 @@
   position: absolute !important;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -22617,47 +22621,27 @@ video {
 }
 
 .grid-container {
+  margin-top: 1.5rem;
   width: 100%;
   height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .grid-container .grid {
-  width: 98%;
-  height: 95%;
+  width: 90%;
   display: grid;
-  grid-template-areas: "latest latest latest latest previous previous" "latest latest latest latest previous previous" "random1 random1 random2 random2 random3 random3" "random4 random4 random4 random4 random5 random5" "random4 random4 random4 random4 random5 random5";
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  gap: 15px;
 }
 
-.grid-container .grid .latest {
-  grid-area: latest;
-}
-
-.grid-container .grid .previous {
-  grid-area: previous;
-}
-
-.grid-container .grid .random1 {
-  grid-area: random1;
-}
-
-.grid-container .grid .random2 {
-  grid-area: random2;
-}
-
-.grid-container .grid .random3 {
-  grid-area: random3;
-}
-
-.grid-container .grid .random4 {
-  grid-area: random4;
-}
-
-.grid-container .grid .random5 {
-  grid-area: random5;
+@media (max-width: 767px) {
+  .grid-container .grid {
+    grid-template-columns: repeat(auto-fit, 90vw);
+  }
 }
 
 .aligned {
@@ -22668,8 +22652,6 @@ video {
 }
 
 .post {
-  width: 95%;
-  height: 95%;
   border-radius: 7px;
   display: flex;
   flex-direction: row;
@@ -22677,24 +22659,96 @@ video {
   justify-content: space-around;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 7px;
 }
 
 .post img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 7px 0 0 7px;
+  border-radius: 7px;
 }
 
 .post .content {
-  width: 50%;
-  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 6rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
   padding-left: 0.5em;
+  bottom: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(17px) saturate(110%);
+          backdrop-filter: blur(17px) saturate(110%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 7px 7px;
+}
+
+.post .content a {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.categorias-section {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.categorias-section .grid {
+  width: 98%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(15vw, 25vw));
+  gap: 15px;
+}
+
+.categorias-section .grid .categoria {
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 10rem;
+}
+
+.categorias-section .grid .categoria img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.categorias-section .grid .categoria .cat-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-radius: 7px;
+  -webkit-backdrop-filter: blur(2px) saturate(110%);
+          backdrop-filter: blur(2px) saturate(110%);
 }
 
 @media (min-width: 640px){

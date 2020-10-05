@@ -22,14 +22,38 @@
 		</button>
 	</div>
 </nav>
-<div class="grid-container">
+<section class="categorias-section">
 	<div class="grid">
-		<div class="post">
-			<img src="https://cdn.britannica.com/08/187508-050-D6FB5173/Shanghai-Tower-Gensler-San-Francisco-world-Oriental-2015.jpg">
-			<div class="content">
-				<a href="#">Título</a>
+		<div class="categoria">
+			<img src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+			<div class="cat-overlay">
+				<a href="#">Categoría</a>
+			</div>
+		</div>
+		<div class="categoria">
+			<img src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+			<div class="cat-overlay">
+				<a href="#">Categoría</a>
+			</div>
+		</div>
+		<div class="categoria">
+			<img src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+			<div class="cat-overlay">
+				<a href="#">Categoría</a>
+			</div>
+		</div>
+		<div class="categoria">
+			<img src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+			<div class="cat-overlay">
+				<a href="#">Categoría</a>
+			</div>
+		</div>
+		<div class="categoria">
+			<img src="https://images.unsplash.com/photo-1453873531674-2151bcd01707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+			<div class="cat-overlay">
+				<a href="#">Categoría</a>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 @endsection

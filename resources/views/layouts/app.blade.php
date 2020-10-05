@@ -79,7 +79,7 @@
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 17.162l-2 .838v-12.972l12-5.028v2.507l-10 4.19v10.465zm18-11.162l-12 5.028v12.972l12-5.028v-12.972zm-14 3.697l10-4.19v-2.507l-12 5.028v12.972l2-.838v-10.465z"/></svg>
-                        <a href="#">Categorías</a>
+                        <a href="{{url('/categorias/')}}">Categorías</a>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
@@ -101,7 +101,7 @@
         <script src="{{ mix('/js/app.js') }}" defer async></script>
         <!--
             Bitquark software® - 2020
-            The Open Blog Proyect
+            The Open Blog Project
         -->
     </body>
 </html>

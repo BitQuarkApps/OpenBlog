@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
+Route::group([
+	'prefix' => 'categorias'
+], function(){
+	Route::get('/', 'HomeController@categorias');
+});
+
 Auth::routes();

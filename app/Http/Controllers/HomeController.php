@@ -31,4 +31,11 @@ class HomeController extends Controller
             'fecha' => $hoy
         ]);
     }
+
+    /**
+     * Mostrar todas las categorías disponibles
+     */
+    public function categorias(){
+        return view('categorias.main');
+    }
 }

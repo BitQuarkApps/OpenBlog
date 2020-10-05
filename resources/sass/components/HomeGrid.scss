@@ -1,41 +1,22 @@
 .grid-container{
+	margin-top: 1.5rem;
 	width: 100%;
 	height: 90vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 
 	& .grid{
-		width: 98%;
-		height: 95%;
+		width: 90%;
 		display: grid;
-		grid-template-areas: "latest latest latest latest previous previous"
-							 "latest latest latest latest previous previous"
-							 "random1 random1 random2 random2 random3 random3"
-							 "random4 random4 random4 random4 random5 random5"
-							 "random4 random4 random4 random4 random5 random5";
-	 	& .latest{
-	 		grid-area: latest;
-	 	}
-	 	& .previous{
-	 		grid-area: previous;
-	 	}
-	 	& .random1{
-	 		grid-area: random1;
-	 	}
-	 	& .random2{
-	 		grid-area: random2;
-	 	}
-	 	& .random3{
-	 		grid-area: random3;
-	 	}
-	 	& .random4{
-	 		grid-area: random4;
-	 	}
-	 	& .random5{
-	 		grid-area: random5;
-	 	}
+		justify-content: space-evenly;
+		grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+		gap: 15px;
+
+		@include media(xs){
+			grid-template-columns: repeat(auto-fit, 90vw);
+		}
 	}
 }
 
@@ -47,8 +28,6 @@
 }
 
 .post{
-	width: 95%;
-	height: 95%;
 	border-radius: 7px;
 	display: flex;
 	flex-direction: row;
@@ -57,21 +36,34 @@
 
 	background-color: #fff;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-
+	position: relative;
+	border-radius: 7px;
 	& img{
-		width: 50%;
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: 7px 0 0 7px;
+		border-radius: 7px;
 	}
 
 	.content{
-		width: 50%;
-		height: 100%;
+		position: absolute;
+		width: 100%;
+		height: 6rem;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-around;
 		padding-left: 0.5em;
+		bottom: 0;
+		left: 0;
+		backdrop-filter: blur(17px) saturate(110%);
+		background-color: rgba(white, 0.6);
+		border-radius: 0 0 7px 7px ;
+
+
+		& a{
+			font-size: 3rem;
+			font-weight: 800;
+		}
 	}
 }
